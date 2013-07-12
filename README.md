@@ -1,4 +1,3 @@
-angular-directive-select-usstate
-================================
+# angular-directive-select-usstates
 
-An angular directive for creating a dropdown of us states.
+A directive for creating a dropdown of us states.

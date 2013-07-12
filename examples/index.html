@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+</head>
+
+<body ng-app="myApp">
+
+  <ang-select-usstates name="testSelect" id="selectTest" class="blarg" selected="OH"></ang-select-usstates>  
+
+  <br /><br />
+
+  <ang-select-usstates name="testSelect2" id="selectTest2" class="blarg" emptyname="blarg!"></ang-select-usstates>  
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" ></script>
+  <script src="../build/angular-directive-select-usstates.js"></script>
+
+  <script>
+    angular.module('myApp', ['angular-directive-select-usstates']);
+  </script>
+
+</body>
+</html>
