@@ -7,10 +7,19 @@ basePath = '../';
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
+  //'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
   'tests/e2e/**/*.js',
   {pattern: 'examples/**/*', watched: true, included: false, served: false},
   {pattern: 'src/**/*', watched: true, included: false, served: false}
 ];
+
+proxies = {
+  '/': 'http://localhost:8000/'
+}
+
+// because we are using a proxy on / we need to set the
+// urlRoot to this crazy value
+urlRoot = '/__testacualar__/';
 
 // list of files to exclude
 exclude = [];

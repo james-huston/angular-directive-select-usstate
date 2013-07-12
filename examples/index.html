@@ -1,24 +1,35 @@
-<html>
+<html ng-app="myApp">
 
 <head>
 
 </head>
 
-<body ng-app="myApp">
+<body>
 
-  <ang-select-usstates name="testSelect" id="selectTest" class="blarg" selected="OH"></ang-select-usstates>  
+  <div ng-controller="MyAppCtrl">
+    <ang-select-usstates ng-model="blarg.selectedState" name="testSelect" id="selectTest" class="blarg" ></ang-select-usstates>
+    {{ blarg.selectedState }}
 
-  <br /><br />
+    <br /><br />
 
-  <ang-select-usstates name="testSelect2" id="selectTest2" class="blarg" emptyname="blarg!"></ang-select-usstates>  
+    <ang-select-usstates ng-model="blarg2.selectedState" name="testSelect2" id="selectTest2" class="blarg" emptyname="blarg!"></ang-select-usstates>  
+    {{ blarg2.selectedState }}
 
+    <div class="blarg" id="greeting">Hello World!</div>
+  </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" ></script>
   <script src="../build/angular-directive-select-usstates.js"></script>
 
   <script>
-    angular.module('myApp', ['angular-directive-select-usstates']);
+
+    angular.module('myApp', ['angular-directive-select-usstates'])
+
+    .controller('MyAppCtrl', function ($scope) {
+      $scope.blarg = { selectedState: 'OH' };
+    });
+
   </script>
 
 </body>

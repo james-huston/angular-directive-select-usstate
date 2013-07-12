@@ -21,17 +21,7 @@ angular.module('angular-directive-select-usstates', ['templates-angular-directiv
     scope: true,
 
     link: function ($scope, element, attributes) {
-
       $scope.emptyName = attributes.emptyname || 'Select State';
-
-      if (attributes.selected && attributes.selected.length === 2) {
-        angular.forEach($scope.states, function (value, key) {
-          if (value.abbreviation === attributes.selected) {
-            $scope.selectedState = value;
-            return;
-          }
-        });
-      }
     },
 
     controller: function ($scope) {
@@ -253,11 +243,9 @@ angular.module('templates-angular-directive-select-usstates', ['angular-directiv
 angular.module("angular-directive-select-usstates/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("angular-directive-select-usstates/index.tpl.html",
     "\n" +
-    "<span>\n" +
-    "  <select ng-model=\"selectedState\" ng-options=\"state.name for state in states\">\n" +
+    "  <select ng-options=\"state.abbreviation as state.name for state in states\">\n" +
     "    <option value=\"\">{{ emptyName }}</option>\n" +
     "  </select>\n" +
-    "</span>\n" +
     "");
 }]);
 })(window, window.angular);

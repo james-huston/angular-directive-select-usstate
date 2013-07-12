@@ -16,17 +16,7 @@ angular.module('angular-directive-select-usstates', ['templates-angular-directiv
     scope: true,
 
     link: function ($scope, element, attributes) {
-
       $scope.emptyName = attributes.emptyname || 'Select State';
-
-      if (attributes.selected && attributes.selected.length === 2) {
-        angular.forEach($scope.states, function (value, key) {
-          if (value.abbreviation === attributes.selected) {
-            $scope.selectedState = value;
-            return;
-          }
-        });
-      }
     },
 
     controller: function ($scope) {
