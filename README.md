@@ -29,6 +29,9 @@ See examples/index.html for example usage of 2 dropdowns on the same page.
 # Developing
 This uses grunt watch to build and run it's local testing webserver. Once you download and do an 'npm install' you then run 'grunt watch' and are up and running.
 
+	npm install
+	grunt watch
+
 While you are developing it's handy to run the e2e tests. Make sure you have 'grunt watch' running and then do the following from the root.
 
 	grunt karma:e2e
