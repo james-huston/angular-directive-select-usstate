@@ -1,6 +1,6 @@
 {
   "name": "angular-directive-select-usstates",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An angular directive for a select box of US States",
   "main": "src/index.js",
   "author": "James Huston <james@jameshuston.net>",
