@@ -1,6 +1,6 @@
 {
   "name": "angular-directive-select-usstate",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "src/index.js",
   "ignore": [
     "**/.*",
@@ -8,10 +8,9 @@
     "components"
   ],
   "dependencies": {
-    "jquery": "~2.0.3",
-    "angular": "~1.0.7"
+    "angular": "~1.x.x"
   },
   "devDependencies": {
-    "angular-mocks": "~1.0.7"
+    "angular-mocks": "~1.x.x"
   }
 }
