@@ -1,6 +1,6 @@
 /**
  * An angular directive for a select box of US States
- * @version v0.1.0-dev-2013-07-12
+ * @version v0.2.1-dev-2014-05-06
  */
 (function (window, angular, undefined) {
 
@@ -24,7 +24,7 @@ angular.module('angular-directive-select-usstates', ['templates-angular-directiv
       $scope.emptyName = attributes.emptyname || 'Select State';
     },
 
-    controller: function ($scope) {
+    controller: [ "$scope", function ($scope) {
       $scope.selectedState = '';
 
       $scope.states = [
@@ -233,7 +233,7 @@ angular.module('angular-directive-select-usstates', ['templates-angular-directiv
             "abbreviation": "WY"
         }
       ];
-    }
+    }]
 
   };
 });

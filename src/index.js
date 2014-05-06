@@ -19,7 +19,7 @@ angular.module('angular-directive-select-usstates', ['templates-angular-directiv
       $scope.emptyName = attributes.emptyname || 'Select State';
     },
 
-    controller: function ($scope) {
+    controller: [ "$scope", function ($scope) {
       $scope.selectedState = '';
 
       $scope.states = [
@@ -228,7 +228,7 @@ angular.module('angular-directive-select-usstates', ['templates-angular-directiv
             "abbreviation": "WY"
         }
       ];
-    }
+    }]
 
   };
 });
