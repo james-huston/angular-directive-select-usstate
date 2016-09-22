@@ -1,7 +1,7 @@
 {
   "name": "angular-directive-select-usstate",
   "version": "0.2.1",
-  "main": "src/index.js",
+  "main": "build/angular-directive-select-usstates.js",
   "ignore": [
     "**/.*",
     "node_modules",
